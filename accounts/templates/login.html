@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<form method="POST">
+    <!-- Medida de proteção contra ataques comuns: -->
+    {% csrf_token %}
+    <table>
+        <!-- Precisa de as_table para uma visualização mais organizada do form -->
+        {{ login_form.as_table }}
+    </table>
+
+    <input type="submit" value="Entrar">
+
+</form>
+
+
+
+{% endblock %}

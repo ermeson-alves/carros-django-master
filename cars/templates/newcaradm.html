@@ -1,0 +1,13 @@
+{% extends "base.html"%}
+
+{% block content %}
+    <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <table>
+        <!-- Abaixo é acessada a variavel de formulario vinda da view new_car: -->
+         <!-- Update: Usando CreateView a variável padrão é 'form' -->
+        {{ form.as_table }}
+        </table>
+        <input type="submit" value="Cadastrar" class="btn-primary">
+    </form>
+{% endblock %}

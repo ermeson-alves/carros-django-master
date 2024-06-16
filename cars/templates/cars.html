@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cars View</title>
+</head>
+{% block content %}
+    <body>
+        <h1>Response da view associada a url /cars/</h1>
+
+        <h2>Este é um H2 de teste</h2>
+
+        <p>:):)</p>
+
+        <h2>Abaixo, estou usando o <a href="https://docs.djangoproject.com/pt-br/5.0/ref/templates/language">django template language</a> para retornar uma lista de carros:</h2>
+        <ul>
+        {% for car in cars %}
+            <li>{{ car.brand }} - {{ car.model }} - {{ car.factory_year }}</li>
+        {% endfor %}
+        </ul>
+    </body>
+{% endblock %}
+</html>
