@@ -15,18 +15,18 @@ def car_inventory_update():
     )   
 
 
-@receiver(pre_save, sender=Car)
-def car_pre_save(sender, instance, **kwargs):
-    """ Processamento antes de salvar dados.
+# @receiver(pre_save, sender=Car)
+# def car_pre_save(sender, instance, **kwargs):
+#     """ Processamento antes de salvar dados.
 
-    Args:
-        sender: Model, Objeto, Quem envia os dados...
-        instance: "Dados" do objeto novo a serem armazenados.
-        ao realizar um print, obtem o mesmo retorno da função 
-        __str__ do model.
-    """
-    if not instance.bio:
-        instance.bio = 'Bio gerada automaticamente!'
+#     Args:
+#         sender: Model, Objeto, Quem envia os dados...
+#         instance: "Dados" do objeto novo a serem armazenados.
+#         ao realizar um print, obtem o mesmo retorno da função 
+#         __str__ do model.
+#     """
+#     if not instance.bio:
+#         instance.bio = 'Bio gerada automaticamente!'
 
 
 @receiver(post_save, sender=Car)
